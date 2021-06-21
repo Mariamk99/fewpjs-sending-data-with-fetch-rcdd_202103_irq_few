@@ -24,5 +24,8 @@ function errorSelf() {
     return response.json();
   }).then(function(json) {
     return json.message;
-  })
+  }).catch(function(x) {
+    // console.log(x) // If you want to see the error message that came in
+    return ":(";
+  });
 }
